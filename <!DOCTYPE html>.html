@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <frameset cols="100, %25 *"></frameset>
+        <frameset rows="100, %25 *"></frameset>
+        <frameset src="a.html"/>
+        <div class="section">
+            <h1><span>Test</span></h1>
+            <iframe height="150" width="300" src="test.html" allowfullscreen frameborder="0"></iframe>
+        </div>
+        <audio controls>
+            <source src="test.mp3" type="mp3">
+        </audio>
+        <video controls>
+            <source src="test.mp4">
+        </video>
+        <progress min="0" max="2001" value="1"></progress>
+    </body>
+</html>
+<html>
+    <body>
+        <img draggable="true"/>
+    </body>
+</html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function drop(test){
+                test.preventDefault();
+            }
+            function drag(test){
+                test.dataTransfer.setData("text", test.target.id);
+            }
+            function drop(test){
+                test.preventDefault();
+                var data=test.dataTransfer.getData("text");
+                test.target.appendChild(document.getElementById(data));
+            }
+        </script>
+    </head>
+    <body>
+        <div id="box" ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+        style="border:1 px solid white";
+        width:200 px; heigth:150 px"></div>
+        <img id="test.jpg" src="undefined" draggable="true"
+        ondragstart="drag(event)" width="110" heigth="30" alt=""/>
+    </body>
+    <script>
+        function drop(test){
+            test.preventDefault();
+            var data= test.dataTransfer.getData('text');
+            test.target.appendChild(document.getElementById(data));
+        }
+    </script>
+    <img src="test.svg" alt="" height="300" />
+    <svg width="1000" height="1000"></svg>
+    <svg width="2000" height="2000"> 
+            <circle cx="80" cy ="80" r="50" fill="green" /> 
+              </svg>
+              <svg width="2000" height="2000"> 
+                <rect width="300" height ="100" x="20" y="20 "fill="green" /> 
+              </svg>
+</html>
+<svg width="2000" height="2000"> 
+      <polygon points="100 100, 200 200, 300 0" style="fill:green; stroke:black"/> 
+        </svg>
+
+        <svg height="500" width="1000"> 
+          <ellipse cx="200" cy="100"  rx="150" ry="70"style="fill:green"/> 
+            </svg>
+
+            <svg width="1000" height="250"> 
+              <rect width="150" height="150" fill ="orange" >
+                <animate attributeName="x" from="0" to="300" dur="3s" fill="freeze" repeatCount="2"/>
+                  </rect>
+                    </svg>
+
+                    <svg width="500" height="500">
+                      <path d="M 0 0 L200 200 L200 0 Z" style="stroke:#000; fill:none;" />
+                    </svg>
+<html>
+<head></head>
+<body>
+    <canvas id="canvas1" width="250 px" height="300 px"> </canvas>
+    <script>
+        var can = document.getElementById("canvas1");
+        var ctx = can.getContext("2d");
+        ctx.fillStyle="rgba(0,200,0,1)";
+        ctx.fillRect(36,10,22,22);
+        ctx.font="25 px Rockwell";
+        ctx.textAlign="start";
+        ctx.fillText("start",10,30);
+        ctx.translate(100,150);
+        ctx.fillStyle="#FF0000";
+          ctx.fillRect(10,10, 100, 100);
+            ctx.rotate((Math.PI/180)*25); // rotate 25 degrees.
+              ctx.fillStyle= "#0000FF";
+                ctx.fillRect(10,10, 100, 100);
+
+    </script>
+    <script>
+        var canvas= document.getElementById('canvas1');
+          ctx = canvas.getContext('2d');
+            ctx.font="bold 22px Tahoma";
+              ctx.textAlign="start";
+                ctx.fillText("start", 10, 30);
+                  ctx.translate(100, 150);
+                    ctx.fillText("after translate", 0, 0);
+                      ctx.rotate(1);
+                        ctx.fillText("after rotate", 0, 0);
+                          crx.scale(1.5, 4);
+                            ctx.fillText("after scale",0,20);
+    </script>
+    <form autocomplete="off"> 
+          <label for="e-mail"> E-mail Adresiniz: </label> 
+            <input name="Email" type="text" required /> 
+              <input type="submint" value="Submint"/> 
+                </form>
+ <input id="mysearch" name="searchitem" type="search"/>
+ <input id="car" type="text" list="colors"/> 
+   <datalist id="colors"> 
+     <option value="Kırmızı"> 
+       <option value="Yeşil"> 
+         <option value="Sarı">
+           </datalist>
+  <input id="email" name="email" type="email"  placeholder="örnek@örnek.com" /> 
+    <br /> 
+      <input id="url" name="url" type="url" 
+        placeholder="örnek.com" /> 
+          <br /> 
+            <input id="tel" name="tel" type="tel" 
+              placeholder="555.555.1211" />                        
+</body>
+</html>
